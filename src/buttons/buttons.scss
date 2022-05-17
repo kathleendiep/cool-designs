@@ -1,0 +1,63 @@
+
+/*
+Default Btn Area Style
+======================================================*/
+.default-btn {
+	font-size: 15px;
+	font-weight: 600;
+	color: white;
+	padding: 18px 35px;
+	line-height: 1;
+	transition: $transition;
+	z-index: 1;
+	text-transform: capitalize;
+	border-radius: 10px;
+	position: relative;
+	cursor: pointer;
+	overflow: hidden;
+	background-color: $main-color;
+	display: inline-block;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: -20px;
+		left: -40px;
+		width: 10px;
+		height: 100px;
+		background-color: #ffffff;
+		opacity: 0.5;
+		transition: $transition;
+		transform: rotate(45deg);
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		top: -20px;
+		right: -40px;
+		width: 10px;
+		height: 100px;
+		background-color: #ffffff;
+		opacity: 0.5;
+		transition: $transition;
+		transform: rotate(45deg);
+	}
+	&.active {
+		background-color: $white-color;
+		color: $main-color;
+		&:hover {
+			color: $white-color;
+			background-color: $main-color;
+		}
+	}
+	&:hover {
+		color: $white-color;
+		transition: $transition;
+		&::before {
+			left: 200px;
+		}
+		&::after {
+			right: 200px;
+		}
+	}
+}
