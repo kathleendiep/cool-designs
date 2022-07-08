@@ -8,7 +8,20 @@
     padding-top: 50px;
     margin-top: 50px;
   }
+/*
+add shadow to img 
+======================================================*/
+  <div className="about-img-full about-img">
+  <img src="/images/profilephoto.png" alt="Image" />
+</div>
 
+// STYLE
+.about-img img{
+  margin: auto;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.375);
+  box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+}
 
 /*
 to make image fit in the background
